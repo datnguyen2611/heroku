@@ -1,0 +1,110 @@
+@import '../../Assets/stylesheets/variable.scss';
+.affiliate {
+    background-color: var(--btn-left);
+    padding: 14px 10px;
+    height: 100vh;
+    .title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 18px;
+        color: var(--text-default);
+        @include ipad {
+            flex-direction: row-reverse;
+            padding-top: 30px;
+        }
+        button {
+            margin: auto 0;
+            color: #c4c4c4;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-default);
+            @include text-700;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .connect_btn {
+        width: 100%;
+        padding: 4px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #f2f2f2;
+        background: #202648;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .ref {
+        background: #7645d9;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        margin-bottom: 12px;
+        .address {
+            font-size: 12px;
+            line-height: 14px;
+            color: #ffffff;
+        }
+        .copy {
+            padding: 5px;
+            color: #7645d9;
+            font-weight: bold;
+            background-color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+    .wrap-income {
+        @include ipad {
+            max-height: 300px;
+            overflow-y: scroll;
+        }
+        @include screen1024 {
+            overflow-y: scroll;
+            max-height: 500px;
+        }
+        .income {
+            display: flex;
+            justify-content: space-between;
+            background: var(--background-6);
+            border-radius: 4px;
+            padding: 5px 10px;
+            position: relative;
+            margin-bottom: 5px;
+            flex-wrap: wrap;
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     width: 0;
+            //     height: 0;
+            //     top: 50%;
+            //     left: 80%;
+            //     transform: translateY(-50%);
+            //     border: 10px solid transparent;
+            //     border-top: 10px solid var(--text-6);
+            // }
+            .item {
+                width: 50%;
+                p {
+                    color: var(--text-6);
+                    font-size: 12px;
+                    line-height: 12px;
+                    margin: 0;
+                }
+                span {
+                    font-size: 12px;
+                    line-height: 14px;
+                    color: #31d0aa;
+                    font-weight: bold;
+                }
+                &:last-child {
+                    text-align: end;
+                }
+            }
+        }
+    }
+}

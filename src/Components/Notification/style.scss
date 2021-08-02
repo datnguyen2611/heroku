@@ -1,0 +1,47 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.notification {
+    position: fixed;
+    top: 4%;
+    right: 1%;
+    padding: 0.5rem 0.7rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 15rem;
+    z-index: 9999;
+    color: #fff;
+    .icon {
+        color: #fff;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p {
+            margin: 0;
+            padding-left: 0.3rem;
+        }
+    }
+    .text {
+        font-weight: 700;
+        color: #fff;
+        font-size: 1rem;
+
+        button {
+            cursor: pointer;
+            font-size: 1rem;
+            margin: auto 0;
+            color: #fff;
+        }
+    }
+}
+.success {
+    background-color: #31d0aa;
+}
+.error {
+    background-color: #ed4b9e;
+}
+.info {
+    background-color: #fcc21b;
+}

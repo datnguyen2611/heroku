@@ -1,0 +1,124 @@
+@import '../Assets/stylesheets/variable.scss';
+
+.wrapper {
+    position: relative;
+    background-color: var(--background-wrap);
+    height: 100%;
+    overflow: hidden;
+
+    @include screen1024 {
+        padding: 5px 5px 0;
+    }
+    @include ipad {
+        padding: 0;
+    }
+    &::before {
+        background-image: url('../Assets/images/background/background-light.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .main-wrapper {
+        // background: var(--background-main);
+        background-color: transparent;
+        box-sizing: border-box;
+        backdrop-filter: blur(24px);
+        /* Note: backdrop-filter has minimal browser support */
+        border-radius: 10px;
+        height: 100%;
+        .main {
+            display: grid;
+            grid-template-columns: 4% 76% 20%;
+            position: relative;
+
+            // height: calc(100vh - 60px);
+            // overflow: hidden;
+            @include screen1440 {
+                grid-template-columns: 5% 75% 20%;
+            }
+            @include screen1024 {
+                height: 100%;
+                grid-template-columns: 9% 71% 20%;
+            }
+            @include ipad {
+                display: flex;
+                flex-direction: column;
+
+
+                //    height: calc(100vh - 60px);
+            }
+            @include iphone {
+                justify-content: space-between;
+            }
+
+            .coin-type {
+                padding: 5px 15px 0;
+            }
+        }
+
+        .nav-left {
+            height: calc(100vh - 60px);
+            background-color: var(--background-10);
+            border-right: solid 1px var(--border-1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include screen1024 {
+                width: 60px;
+            }
+            @include ipad {
+                background-color: var(--btn-left);
+                width: 100%;
+                display: flex;
+                height: 90px;
+            }
+            @include iphone {
+                height: 60px;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                z-index: 12;
+            }
+        }
+        .nav-right {
+            background: var(--background-10);
+            border-radius: 0 0 7px 0;
+            border-left: solid 1px var(--border-1);
+            // padding: 19px 27px;
+            position: relative;
+            z-index: 2;
+            max-height: 100%;
+            overflow-y: auto;
+
+            // @include screen1440 {
+            //     padding: 19px 10px;
+            // }
+            @include ipad {
+                // padding: 5px;
+                overflow-y: unset;
+                // height: calc(100% - 90px);
+            }
+            @include iphone {
+                padding-bottom: 60px;
+                // height: calc(100% - 70px);
+            }
+        }
+        .chart-wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+            @include ipad {
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,37 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.account {
+    background-color: #101323;
+    width: 220px;
+    color: white;
+    border-radius: 7px;
+
+    .title {
+        padding: 13px 0px 15px 27px;
+        font-weight: 700;
+        border-bottom: 1px solid #ffffff;
+    }
+    .list {
+        padding-bottom: 6px;
+
+        .option {
+            display: flex;
+            padding: 6px 0px 6px 27px;
+            align-items: center;
+            cursor: pointer;
+            &:hover {
+                background: #272a39;
+            }
+            a,
+            a:hover,
+            a:active,
+            a:focus,
+            a:visited {
+                color: white;
+            }
+            img {
+                margin-right: 15px;
+            }
+        }
+    }
+}

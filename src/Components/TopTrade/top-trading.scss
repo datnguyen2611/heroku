@@ -1,0 +1,159 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    // flex-direction: row-reverse;
+    background-color: var(--btn-left);
+    margin-bottom: 18px;
+    @include ipad {
+        // flex-direction: unset;
+        padding-top: 30px;
+    }
+    button {
+        font-size: 14px;
+        color: var(--text-default);
+        cursor: pointer;
+        @include ipad {
+            font-size: 18px;
+        }
+    }
+    p {
+        font-size: 18px;
+        color: var(--text-default);
+        @include text-700;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.trading-expand {
+    background-color: var(--btn-left);
+    overflow-y: hidden;
+    transition: 0.2s ease;
+    border-radius: 7px 7px 0 0;
+    height: 100vh;
+    padding: 14px 10px;
+    // @include ipad {
+    //     height: 100%;
+    // }
+
+    .content {
+        // padding: 10px;
+        @include screen1024 {
+            padding: 5px;
+        }
+        @include ipad {
+            padding: 10px;
+        }
+        background-color: #272a39;
+        padding: 7px;
+        border-radius: 5px;
+        max-height: 500px;
+        overflow-y: scroll;
+        color: #fff;
+
+        .item {
+            margin-bottom: 15px;
+        }
+
+        .top-header {
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 20px;
+            padding: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            font-size: 10px;
+            line-height: 12px;
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        .details {
+            background-color: #101323;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            padding: 0;
+            height: 0;
+            overflow-y: hidden;
+            transition: all 0.3s;
+            border: none;
+
+            &.active {
+                height: 85px;
+                padding: 8px;
+                border: 1px solid #31d0aa;
+            }
+
+            &-item {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+        // table {
+        //     width: 100%;
+        //     max-height: 500px;
+        //     padding: 5px;
+        //     border-radius: 5px;
+        //     overflow-y: scroll;
+        //     background-color: #272A39;
+        //     th {
+        //         padding-bottom: 10px;
+        //         font-weight: bold;
+        //         font-size: 14px;
+        //         line-height: 16px;
+        //         color: #a4a4a4;
+        //         text-align: center;
+        //         &:first-child {
+        //             text-align: left;
+        //         }
+        //         &:last-child {
+        //             text-align: right;
+        //         }
+        //     }
+        //     tbody {
+        //         overflow-y: scroll;
+        //         max-height: 50vh;
+        //         @include ipad {
+        //             max-height: 70vh;
+        //         }
+        //         td {
+        //             text-align: center;
+        //             font-weight: 600;
+        //             font-size: 12px;
+        //             line-height: 14px;
+        //             border-bottom: 1px solid #dadada;
+        //             padding: 10px 0;
+        //             color: #f8f9fa;
+        //             text-align: center;
+        //             &:first-child {
+        //                 @include text-700;
+        //                 color: #1fc7d4;
+        //             }
+        //             &:first-child {
+        //                 text-align: left;
+        //             }
+        //             &:last-child {
+        //                 text-align: right;
+        //             }
+        //         }
+        //     }
+        // }
+    }
+}

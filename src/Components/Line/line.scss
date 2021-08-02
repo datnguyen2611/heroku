@@ -1,0 +1,83 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.line-wrap {
+    p {
+        margin: 0;
+    }
+    background-color: var(--btn-left);
+    padding: 14px 10px;
+    height: 100%;
+    .title {
+        color: var(--text-default);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+        flex-direction: row-reverse;
+        @include ipad {
+            flex-direction: unset;
+            padding-top: 30px;
+        }
+        button {
+            margin: auto 0;
+            color: #c4c4c4;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-default);
+            @include text-700;
+            width: 100%;
+            text-align: center;
+        }
+        @include ipad {
+            font-size: 20px;
+            @include text-700;
+            padding-top: 20px;
+        }
+    }
+    .connect_btn {
+        width: 100%;
+        padding: 4px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #f2f2f2;
+        background: #202648;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    &-item-wrap {
+        .item {
+            display: flex;
+            padding: 8px;
+            justify-content: space-between;
+            background: var(--background-6);
+            border-radius: 5px;
+            margin-bottom: 5px;
+            align-items: center;
+            cursor: pointer;
+            @include ipad {
+                margin-bottom: 10px;
+                font-size: 20px;
+                padding: 16px;
+            }
+            &-content {
+                display: flex;
+                align-items: center;
+                img {
+                    margin-right: 5px;
+                    @include ipad {
+                        margin-right: 10px;
+                    }
+                }
+                p {
+                    @include text-700;
+                    color: var(--text-default);
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

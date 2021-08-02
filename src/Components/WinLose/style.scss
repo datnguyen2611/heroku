@@ -1,0 +1,94 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.notice_container {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    width: 260px;
+    height: 170px;
+    border-radius: 13px;
+    z-index: 100;
+    @include ipad {
+        left: 36%;
+    }
+    @include iphone {
+        top: 35%;
+        left: 20%;
+    }
+    @include iphone-mini {
+        left: 16%;
+    }
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+    .close_btn {
+        text-align: end;
+        margin-right: -25px;
+        margin-bottom: -15px;
+        cursor: pointer;
+    }
+    .body {
+        background: url('../../Assets/images/background/win-background.svg'), var(--gradient-win);
+        padding-top: 15px;
+        padding-bottom: 30px;
+        border-top-left-radius: 13px;
+        border-top-right-radius: 13px;
+        p {
+            margin: 0;
+        }
+        .title {
+            @include text-500;
+            margin-bottom: 17px;
+            color: var(--text-default);
+            text-align: center;
+            font-size: 14px;
+        }
+        .amount {
+            color: #31d0aa;
+            font-size: 24px;
+            text-align: center;
+            font-weight: 700;
+        }
+    }
+    .footer {
+        background-color: #7645d9;
+        color: white;
+        border-bottom-left-radius: 13px;
+        border-bottom-right-radius: 13px;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        p {
+            margin: 0;
+            text-align: center;
+        }
+        .round {
+            font-size: 12px;
+        }
+        .result {
+            font-size: 20px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.lose {
+    .body {
+        background: url('../../Assets/images/background/lose-background.svg'), var(--gradient-lose);
+        .amount {
+            color: #ed4b9e;
+        }
+    }
+}
+.draw {
+    .body {
+        background: url('../../Assets/images/background/draw-background.svg'), linear-gradient(180deg, #202648 10.29%, #8FB8FF 196.47%);
+        .amount {
+            color: #ed4b9e;
+        }
+    }
+}
+
+.hide {
+    display: none;
+}

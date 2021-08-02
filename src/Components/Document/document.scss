@@ -1,0 +1,95 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.document {
+    p {
+        margin: 0;
+    }
+    background-color: var(--btn-left);
+    padding: 14px 10px;
+    @include screen1024 {
+        height: 100%;
+    }
+    .title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 18px;
+        color: var(--text-default);
+        @include ipad {
+            flex-direction: row-reverse;
+        }
+        button {
+            margin: auto 0;
+            color: #c4c4c4;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-default);
+            @include text-700;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .document-wrap {
+        @include ipad {
+            overflow-y: scroll;
+            max-height: 500px;
+        }
+        @include ipad {
+            max-height: 570px;
+            overflow-y: scroll;
+        }
+        @include ipad {
+            max-height: 530px;
+        }
+
+        &-item {
+            margin-bottom: 7px;
+            padding: 8px 9px;
+            background-color: var(--background-4);
+            border-radius: 5px;
+            &-title {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                img {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    margin: auto 0;
+                    margin-right: 5px;
+                }
+                .text {
+                    h3 {
+                        color: var(--text-default);
+                        @include text-700;
+                        font-size: 12px;
+                        margin-bottom: 3px;
+                    }
+                    p {
+                        color: var(--text-default);
+                        @include text-400;
+                        font-size: 12px;
+                    }
+                }
+            }
+            &-content {
+                font-size: 12px;
+                @include text-400;
+                color: var(--text-default);
+                margin-bottom: 4px;
+            }
+            &-img {
+                width: 100%;
+                border-radius: 5px;
+                text-align: center;
+                img {
+                    border-radius: 5px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

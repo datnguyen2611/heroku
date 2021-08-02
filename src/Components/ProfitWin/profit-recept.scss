@@ -1,0 +1,192 @@
+@import '../../Assets/stylesheets/variable.scss';
+.list-winner {
+    .your-result {
+        display: flex;
+        height: 50px;
+        border-radius: 5px;
+        align-items: center;
+        margin-bottom: 5px;
+
+        .left {
+            background-color: var(--background-5);
+            color: #31d0aa;
+            @include text-700;
+            font-size: 12px;
+            width: 30%;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 5px;
+            p {
+                margin: 0;
+            }
+        }
+        .right {
+            height: 100%;
+            padding: 0 10px;
+            width: 70%;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: #fff;
+            background-color: #31d0aa;
+            @include text-700;
+            font-size: 12px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+            button {
+                padding: 8px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 5px;
+                color: #fff;
+            }
+
+            &-result {
+                width: 100%;
+                p {
+                    margin: 0;
+                    @include text-700;
+                    font-size: 12px;
+                    text-align: right;
+                }
+                .sub {
+                    @include text-400;
+                    font-size: 12px;
+                }
+            }
+            i {
+                font-size: 14px;
+            }
+        }
+        .win {
+            background-color: #31d0aa;
+        }
+        .lose {
+            background-color: #ed4b9e;
+        }
+        .live {
+            background-color: #7645d9;
+        }
+        .starting-in {
+            background-color: #a88be2;
+        }
+    }
+}
+// .your-story {
+//     display: none;
+//     .text-win {
+//         color: #31d0aa;
+//     }
+//     .text-lose {
+//         color: #ed4b9e;
+//     }
+//     .bull {
+//         background-color: #31d0aa;
+//     }
+//     .bear {
+//         background-color: #ed4b9e;
+//     }
+//     .your-story-recept,
+//     .round-recept {
+//         .title {
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             color: var(--text-default);
+//             font-size: 12px;
+//             @include text-700;
+//             .icon {
+//                 display: flex;
+//                 align-items: center;
+//                 p {
+//                     margin-right: 5px;
+//                     text-transform: uppercase;
+//                     @include text-400;
+//                 }
+//             }
+//         }
+//         .item {
+//             background: var(--background-5);
+//             border: 1px solid #31d0aa;
+//             box-sizing: border-box;
+//             border-radius: 8px;
+//             padding: 7px;
+//             .btn-collect {
+//                 width: 100%;
+//                 padding: 6.5px 0;
+//                 text-align: center;
+//                 background-color: #c4c4c4;
+//                 color: #fff;
+//                 border-radius: 5px;
+//                 @include text-700;
+//                 margin-bottom: 5px;
+//             }
+//             .your-redection {
+//                 &-item {
+//                     display: flex;
+//                     justify-content: space-between;
+//                     margin-bottom: 7px;
+//                     p {
+//                         color: var(--text-default);
+//                         @include text-700;
+//                         margin: auto 0;
+//                         font-size: 12px;
+//                     }
+//                     .pink-color {
+//                         color: #ed4b9e;
+//                     }
+//                     button {
+//                         display: flex;
+//                         align-items: center;
+//                         color: #fff;
+//                         // background-color: #ed4b9e;
+//                         padding: 4px 8px;
+//                         border-radius: 5px;
+//                         font-size: 12px;
+//                         @include text-700;
+//                         span {
+//                             margin-left: 5px;
+//                         }
+//                     }
+//                     .success {
+//                         color: #31d0aa;
+//                     }
+//                 }
+//                 .text-right {
+//                     text-align: right;
+//                     color: var(--text-default);
+//                     font-size: 12px;
+//                     margin: 0 5px;
+//                     @include text-500;
+//                 }
+//             }
+//         }
+//     }
+//     .opening-block {
+//         &-item {
+//             display: flex;
+//             align-items: center;
+//             justify-content: space-between;
+//             margin-top: 5px;
+//             p {
+//                 color: var(--text-default);
+//                 font-size: 12px;
+//                 margin: 0;
+//                 @include text-500;
+//                 &:last-child {
+//                     color: #1fc7d4;
+//                 }
+//             }
+//         }
+//         margin-bottom: 10px;
+//     }
+// }
+// .active-story {
+//     display: block;
+// }

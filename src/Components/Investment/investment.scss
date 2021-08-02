@@ -1,0 +1,128 @@
+@import '../../Assets/stylesheets/variable.scss';
+.investment {
+    background-color: var(--btn-left);
+    padding: 14px 10px;
+    @include ipad {
+        height: calc(100vh - 90px);
+    }
+    @include iphone {
+        height: calc(100vh - 60px);
+    }
+    p {
+        margin: 0;
+    }
+    .title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 18px;
+        color: var(--text-default);
+        @include ipad {
+            flex-direction: row-reverse;
+            padding-top: 30px;
+        }
+        button {
+            margin: auto 0;
+            color: #c4c4c4;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-default);
+            @include text-700;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &_search {
+        margin: 5px 0;
+        background-color: var(--background-4);
+        padding: 8px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .search_input {
+            background-color: transparent;
+            width: 100%;
+            border: none;
+            color: var(--text-default);
+            &:focus {
+                outline: none;
+                border: none;
+            }
+        }
+    }
+    .list-invesment {
+        padding: 9px 5px;
+        background-color: var(--background-4);
+        border-radius: 5px;
+        margin-bottom: 10px;
+        // border-bottom: 1px solid #DADADA;
+        overflow-y: auto;
+        max-height: 40vh;
+        @include ipad {
+            max-height: 100vh;
+        }
+        @include iphone {
+            height: calc(100vh - 200px);
+        }
+        p {
+            margin: 0;
+        }
+        &-item {
+            display: flex;
+            padding: 7px 12px;
+            justify-content: space-between;
+            background: var(--btn-left);
+            box-shadow: 1px 1px 0 var(--box-shadow);
+            border-radius: 5px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            .coin {
+                display: flex;
+                img {
+                    margin-right: 5px;
+                }
+                p {
+                    color: var(--text-default);
+                    font-size: 12px;
+                    @include text-500;
+                }
+
+                .coin-pair {
+                    display: flex;
+                    align-items: center;
+
+                    .base-asset {
+                        z-index: 1;
+                    }
+                    .quote-asset {
+                        margin-left: -10px;
+                    }
+                }
+            }
+            .price {
+                p {
+                    margin: 0;
+                    color: var(--text-default);
+                    font-size: 12px;
+                    @include text-400;
+                }
+            }
+        }
+
+        .coin-pair {
+            display: flex;
+            align-items: center;
+
+            .base-asset {
+                z-index: 1;
+            }
+            .quote-asset {
+                margin-left: -13px;
+            }
+        }
+    }
+}

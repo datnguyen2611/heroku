@@ -1,0 +1,144 @@
+@import '../../Assets/stylesheets/variable.scss';
+.investment {
+    background-color: var(--btn-left);
+    padding: 14px 10px;
+    height: 100vh;
+    .connect_btn {
+        width: 100%;
+        padding: 4px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #f2f2f2;
+        background: #202648;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    p {
+        margin: 0;
+    }
+    .title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 18px;
+        color: var(--text-default);
+        @include ipad {
+            // flex-direction: row-reverse;
+            padding-top: 30px;
+        }
+        button {
+            margin: auto 0;
+            color: #c4c4c4;
+            cursor: pointer;
+            font-size: 14px;
+            @include ipad {
+                font-size: 18px;
+            }
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-default);
+            @include text-700;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    .list-history {
+        background-color: var(--background-4);
+        padding: 8px 5px;
+        border-radius: 5px;
+        max-height: 300px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+
+        /* Track */
+        & ::-webkit-scrollbar-track {
+            background: #fff;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #7645d9;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #a88be2;
+        }
+        @include screen1024 {
+            overflow-y: scroll;
+            height: 500px;
+        }
+        @include ipad {
+            height: 60vh;
+        }
+        @include iphone-mini {
+            height: 55vh;
+        }
+    }
+
+    .main-history {
+        h2 {
+            @include text-700;
+            font-size: 14px;
+            margin-bottom: 7px;
+            color: var(--text-default);
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            p {
+                color: var(--text-default);
+                font-size: 14px;
+                @include text-500;
+                &:last-child {
+                    color: #31d0aa;
+                    @include text-700;
+                }
+            }
+        }
+    }
+    .collect-btn {
+        background-color: #7645d9;
+        color: #fff;
+        font-size: 14px;
+        padding: 10px 0;
+        width: 100%;
+        border-radius: 5px;
+        margin: 10px 0;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.5s ease-out;
+        @include text-700;
+        &:hover {
+            background-color: #31d0aa;
+        }
+    }
+    .btn-event {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5px;
+
+        button {
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            background-color: #282b39;
+            border-radius: 5px;
+            border: 1px solid #40424f;
+            padding: 5px 9px;
+            cursor: pointer;
+        }
+        .active {
+            background-color: #7645d9;
+            color: #fff;
+        }
+    }
+}

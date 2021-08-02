@@ -1,0 +1,48 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.connect-wallet {
+    display: flex;
+    align-items: center;
+    position: relative;
+    .address {
+        margin: 0 5px;
+        background-color: var(--background-default);
+        border-radius: 5px;
+        padding: 7px 10px;
+        color: var(--text-default);
+        @include text-700;
+        font-size: 14px;
+        cursor: pointer;
+        border: none;
+        white-space: nowrap;
+        @include iphone {
+            // position: fixed;
+            top: 5px;
+            left: 5px;
+            z-index: 1;
+        }
+    }
+    .icon-wallet {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 80%;
+            border-radius: 50%;
+
+            &:first-child {
+                background-color: #0b0d19;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .account_option {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 10;
+    }
+}

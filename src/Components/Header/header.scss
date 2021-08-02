@@ -1,0 +1,30 @@
+@import '../../Assets/stylesheets/variable.scss';
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 10px 20px 0;
+    position: relative;
+    background-color: var(--background-10);
+    border-bottom: 1px solid var(--border-1);
+    @include screen1440 {
+        // display: none;
+        padding: 5px 0 0;
+    }
+    @include iphone {
+        border: none;
+        margin-bottom: 5px;
+    }
+    .right-header {
+        display: flex;
+        align-items: center;
+    }
+    .logo {
+        padding-right: 10px;
+        max-width: 100%;
+        img {
+            padding: 0 10px;
+        }
+    }
+}

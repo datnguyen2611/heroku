@@ -1,0 +1,206 @@
+@import '../../Assets/stylesheets/variable.scss';
+.nav-left-wrap {
+    display: flex;
+    @include ipad {
+        display: block;
+    }
+    .nav-left-item {
+        width: 100%;
+        position: relative;
+        // background-color: var(--background-8);
+        padding: 2px;
+        // @include screen1024 {
+        //     width: 60px;
+        // }
+        @include ipad {
+            //     width: 100%;
+            display: flex;
+            //     height: 90px;
+            //     position: fixed;
+            //     bottom: 0;
+            //     left: 0;
+            //     z-index: 4;
+        }
+        // @include iphone {
+        //     height: 70px;
+        // }
+        .item {
+            // box-shadow:0px 2px 6px rgba(255, 255, 255, 40%);
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: var(--btn-left);
+            text-align: center;
+            position: relative;
+            aspect-ratio: 1 / 1;
+            margin-bottom: 5px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include ipad {
+                width: 50%;
+                margin-bottom: 0;
+                box-shadow: none;
+                border-radius: 0;
+            }
+            @include iphone {
+                justify-content: flex-start;
+            }
+
+            img {
+                margin: 0 auto;
+                width: 50%;
+                @include ipad {
+                    width: 30%;
+                    margin: 0 auto 8px;
+                }
+            }
+            // &:hover {
+            //     // background-color: var(--btn-6);
+            // }
+            // &:hover p  {
+            //     opacity: 1;
+            //     z-index: 2;
+            // }
+            p {
+                @include text-400;
+                text-align: center;
+                font-size: 12px;
+                color: var(--text-default);
+
+                @include screen1440 {
+                    font-size: 12px;
+                }
+                @include screen1024 {
+                    font-size: 12px;
+                }
+                @include ipad {
+                    font-size: 12px;
+                }
+
+                @include ipad {
+                    font-size: 12px;
+                    color: var(--text-11);
+                }
+            }
+        }
+        .active-nav {
+            // background-color: var(--btn-6);
+
+            p {
+                color: #1fc7d4;
+                @include ipad {
+                    color: var(--text-default-2);
+                }
+            }
+        }
+    }
+    .nav-left-active {
+        overflow: hidden;
+        opacity: 0;
+        left: 4%;
+        top: 0;
+        width: 20%;
+        position: absolute;
+        transition: 0.3s opacity linear;
+        max-height: 100vh;
+        // margin-left: 5px;
+        border-radius: 5px;
+        z-index: -1;
+        @include ipad {
+            top: 0;
+            right: -200%;
+            left: unset;
+            // opacity: 1;
+            position: fixed;
+            width: 100%;
+            transition: 0.5s ease;
+            max-height: calc(100% - 90px);
+        }
+        @include iphone {
+            max-height: 100vh;
+        }
+    }
+    .active-tab {
+        opacity: 1;
+        z-index: 11;
+
+        @include ipad {
+            right: 0;
+            transition: 0.5s linear;
+            z-index: 11;
+            width: 100%;
+            margin-left: 0;
+            // height: 100%;
+        }
+    }
+    .open-hamburger {
+        padding: 16px 24px;
+        width: 100%;
+        height: calc(100% - 90px);
+        position: fixed;
+        top: 0;
+        right: -100%;
+        transition: 0.5s linear;
+        z-index: -1;
+        background-color: var(--btn-left);
+        @include iphone {
+            height: calc(100% - 60px);
+        }
+        .dark-mode {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include ipad {
+                padding-top: 30px;
+            }
+            p {
+                color: var(--text-default);
+                font-size: 24px;
+                @include text-700;
+            }
+            .btn-mode {
+                display: flex;
+                button {
+                    padding-left: 5px;
+                    margin: auto 0;
+                    color: #c4c4c4;
+                    cursor: pointer;
+                    font-size: 18px;
+                }
+            }
+        }
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            margin: 10px 0;
+            padding: 16px;
+            background-color: var(--btn-6);
+            img {
+                width: 6%;
+            }
+            p {
+                width: 60%;
+                font-size: 16px;
+                margin: 0 0 0 10px;
+                @include text-500;
+                color: var(--text-default);
+            }
+        }
+    }
+    .active-hamburger {
+        right: 0;
+        z-index: 12;
+    };
+    // .top-trading-size{
+    //     width: 100%;
+    //     @include ipad{
+    //         height: calc(100% - 90px);
+    //     }
+    //     @include iphone{
+    //         height: calc(100% - 70px);
+    //     }
+    // }
+}

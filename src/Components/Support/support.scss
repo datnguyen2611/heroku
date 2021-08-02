@@ -1,0 +1,140 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.support {
+    p {
+        margin: 0;
+    }
+    background-color: var(--btn-left);
+    padding: 14px 10px;
+    @include ipad {
+        height: 100%;
+    }
+    .title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 18px;
+        color: var(--text-default);
+        @include ipad {
+            flex-direction: row-reverse;
+        }
+        button {
+            margin: auto 0;
+            color: #c4c4c4;
+            cursor: pointer;
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-default);
+            @include text-700;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .btn-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: 16px;
+        a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #6c51d9;
+            @include text-700;
+            font-size: 14px;
+            img {
+                margin-right: 5px;
+                widows: 100%;
+            }
+        }
+    }
+    &-main {
+        padding: 8px 9px;
+        background-color: var(--background-4);
+        border-radius: 5px;
+        @include ipad {
+            max-height: 500px;
+            overflow-y: scroll;
+        }
+        @include ipad {
+            max-height: 570px;
+        }
+        @include ipad {
+            max-height: 530px;
+        }
+        .title {
+            @include text-700;
+            font-size: 14px;
+            color: var(--text-default);
+            margin-bottom: 8px;
+        }
+        .search-input {
+            input {
+                padding: 6px 11px;
+                width: 100%;
+                box-shadow: inset 0px 2px 2px -1px rgba(74, 74, 104, 0.1);
+                border-radius: 5px;
+                background-color: var(--btn-left);
+                color: var(--text-8);
+                font-size: 12px;
+                @include text-400;
+                border: none;
+                &::placeholder {
+                    color: var(--text-8);
+                }
+                &:focus {
+                    border: none;
+                }
+            }
+        }
+        .list-faq {
+            &-item {
+                background-color: var(--background-5);
+                padding: 6px 8px;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                &-question {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 4px;
+                    cursor: pointer;
+                    position: relative;
+                    z-index: 1;
+                    img {
+                        width: 7%;
+                        @include ipad {
+                            width: 4%;
+                        }
+                    }
+                    p {
+                        color: var(--text-9);
+                        @include text-700;
+                        font-size: 14px;
+                    }
+                }
+                .content {
+                    height: 0;
+                    opacity: 0;
+                    z-index: -1;
+                    position: relative;
+                    transition: 0.5s linear;
+                    color: var(--text-default);
+                    @include text-400;
+                    font-size: 12px;
+                    p {
+                        @include ipad {
+                            width: fit-content;
+                        }
+                    }
+                }
+                .active-content {
+                    height: 100%;
+                    opacity: 1;
+                    z-index: 1;
+                }
+            }
+        }
+    }
+}

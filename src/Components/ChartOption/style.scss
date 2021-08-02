@@ -1,0 +1,111 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.chart-selection {
+    position: relative;
+    // @include ipad {
+    //     display: none;
+    // }
+    @include ipad {
+        display: flex;
+    }
+    .selection-item {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        cursor: pointer;
+        @include ipad {
+            margin-bottom: 0;
+            margin-right: 5px;
+            height: 100%;
+            background-color: var(--background-7);
+        }
+        img {
+            border: solid 0.5px var(--border-5);
+            padding: 3px;
+            border-radius: 4px;
+
+            @include ipad {
+                padding: 0 10px;
+                max-width: 100%;
+            }
+        }
+        .time-label {
+            border: solid 0.5px var(--border-5);
+            padding: 3px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    #indicators {
+        img {
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .chart_list {
+        width: 110px;
+        background-color: var(--background-10);
+        position: absolute;
+        left: 110%;
+        z-index: 10;
+        padding: 6px;
+        @include ipad {
+            left: 0;
+            top: 100%;
+            background-color: var(--background-7);
+            z-index: 11;
+            height: fit-content;
+        }
+        .close_btn {
+            text-align: right;
+            .close_icon {
+                color: #c4c4c4;
+            }
+        }
+        .title {
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--text-default);
+            margin-bottom: 15px;
+        }
+        .option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            background-color: transparent;
+            padding: 4px 10px;
+            font-size: 12px;
+            color: var(--text-default);
+            cursor: pointer;
+            &:hover {
+                background-color: var(--background-6);
+            }
+            img {
+                margin-right: 10px;
+                width: 16px;
+            }
+        }
+        .option_active {
+            background-color: var(--background-6);
+        }
+    }
+    .type_list {
+        bottom: 62%;
+    }
+    .time_list {
+        bottom: 14%;
+    }
+}
+.hide {
+    display: none;
+}

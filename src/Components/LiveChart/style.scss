@@ -1,0 +1,25 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.info {
+    display: flex;
+    position: absolute;
+    top: 2%;
+    left: 1%;
+
+    .info_item {
+        margin-right: 50px;
+        @include iphone {
+            margin-right: 30px;
+        }
+        .text1 {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-1);
+        }
+        .text2 {
+            @extend .text1;
+            font-size: 12px;
+            font-weight: 400;
+        }
+    }
+}

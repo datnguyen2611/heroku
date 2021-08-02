@@ -1,0 +1,111 @@
+@import '../../Assets/stylesheets/variable.scss';
+p {
+    margin: 0;
+}
+.coin-type-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    @include ipad {
+        justify-content: center;
+    }
+    .coin-type {
+        display: flex;
+
+        align-items: center;
+        // border: solid 1px var(--border-4);
+        @include ipad {
+            padding: 8px 10px;
+            border-radius: 5px;
+        }
+        @include iphone {
+            padding: 8px 5px;
+        }
+        p {
+            font-size: 12px;
+        }
+        .item {
+            cursor: pointer;
+            padding: 5px 0;
+            margin: 0 2px;
+            background-color: transparent;
+            opacity: 0.6;
+            display: none;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            border: solid 1px var(--border-4);
+            @include ipad {
+                padding: 8px 10px;
+                border-radius: 5px;
+            }
+            p {
+                font-size: 12px;
+            }
+            .token-image {
+                width: 16px;
+                height: 16px;
+            }
+            .close {
+                text-align: right;
+                font-size: 12px;
+                padding: 0 5px;
+                button {
+                    margin: 0;
+                    padding: 0;
+                    cursor: pointer;
+                    color: var(--text-default);
+                    background-color: transparent;
+                    border: none;
+                }
+            }
+            .wrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--text-default);
+                @include text-700;
+                font-size: 12px;
+                padding: 0 10px;
+                img {
+                    margin-right: 5px;
+                }
+            }
+        }
+        .active {
+            opacity: 1;
+            background-color: var(--background-11);
+            @include ipad {
+                display: flex !important;
+                // flex-direction: row-reverse;
+            }
+        }
+    }
+    .active {
+        opacity: 1;
+        background-color: var(--background-11);
+        @include ipad {
+            display: flex !important;
+        }
+    }
+    .open-active {
+        display: flex;
+        @include ipad {
+            display: none;
+        }
+    }
+
+    .right-item-coin-type {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+        background-color: var(--btn-left);
+        z-index: 2;
+        padding: 10px;
+    }
+    .active-popup {
+        display: block;
+    }
+}

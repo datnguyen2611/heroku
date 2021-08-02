@@ -1,0 +1,56 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.network {
+    position: relative;
+
+    * {
+        font-family: 'Roboto', sans-serif;
+    }
+    &_active {
+        color: #130f26;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        cursor: pointer;
+        width: 110px;
+        background-color: #fcc21b;
+        p {
+            font-weight: 500;
+        }
+        @include iphone {
+            padding: 3px 5px;
+        }
+    }
+    &_list {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        transition: 0.5s linear;
+        top: 100%;
+        left: 0;
+        background-color: var(--background-12);
+        font-weight: 700;
+        font-size: 14px;
+        &:last-child {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+    .item {
+        @extend .network_active;
+        color: var(--text-default-3);
+
+        &:hover {
+            background-color: var(--background-13);
+        }
+    }
+
+    .hide {
+        opacity: 1;
+        z-index: 10;
+    }
+}

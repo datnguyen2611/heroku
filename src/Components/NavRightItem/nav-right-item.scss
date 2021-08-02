@@ -1,0 +1,288 @@
+@import '../../Assets/stylesheets/variable.scss';
+.nav-right-item-wrap {
+    @include ipad {
+        padding: 5px;
+    }
+    .wrap-line {
+        @include ipad {
+            display: flex;
+        }
+        .live-line {
+            @include ipad {
+                position: relative;
+                width: 40%;
+                background-color: var(--background-7);
+                border-radius: 5px;
+                padding: 3px 10px;
+                margin-right: 5px;
+            }
+            .title {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin: 0;
+                p {
+                    display: flex;
+                    align-items: center;
+                    color: #7645d9;
+                    margin: 0;
+                    font-size: 18px;
+                    @include ipad {
+                        margin: 0;
+                        font-size: 14px;
+                    }
+                    @include text-700;
+                    img {
+                        padding-right: 5px;
+                    }
+                    &:last-child {
+                        color: var(--text-violet);
+                        @include text-400;
+                    }
+                }
+                .dropdown-icon {
+                    font-size: 10px;
+                    color: var(--text-violet);
+                    font-weight: 400;
+                    margin: auto 5px;
+                }
+                .time-wait {
+                    font-size: 12px;
+                    @include text-700;
+                    color: #80818a;
+                }
+            }
+        }
+    }
+    .last-price {
+        @include ipad {
+            position: absolute;
+            left: 2%;
+            width: 60%;
+            top: 6%;
+            height: fit-content;
+            z-index: 12;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: var(--background-7);
+            display: none;
+        }
+        @include ipad {
+            height: 45vh;
+        }
+        @include iphone {
+            height: 50vh;
+        }
+        .title {
+            @include text-700;
+            color: #a4a4a4;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .price {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            margin-bottom: 5px;
+            p {
+                font-size: 18px;
+                color: #31d0aa;
+                margin: 0;
+                @include text-700;
+                @include ipad {
+                    font-size: 16px;
+                }
+                @include ipad {
+                    font-size: 12px;
+                }
+            }
+            button {
+                display: flex;
+                align-items: center;
+                padding: 8px 9px;
+                border-radius: 5px;
+                color: #fff;
+                margin: auto 0;
+                background: #ed4b9e;
+
+                border: none;
+                font-size: 18px;
+                @include screen1024 {
+                    font-size: 14px;
+                }
+                @include text-400;
+                img {
+                    padding-right: 5px;
+                }
+                @include ipad {
+                    padding: 8px 5px;
+                }
+            }
+            .increase {
+                background: #31d0aa;
+            }
+        }
+        .lock-price {
+            display: flex;
+            justify-content: space-between;
+            font-size: 16px;
+            @include text-400;
+            p {
+                @include ipad {
+                    margin: 0;
+                }
+            }
+            color: var(--text-default);
+        }
+        .price-pool {
+            margin: 9px 0;
+            .title {
+                color: var(--text-default);
+                @include text-700;
+                font-size: 16px;
+                margin-bottom: 25px;
+                @include ipad {
+                    margin-bottom: 10px;
+                }
+            }
+            .price-btn {
+                &-right {
+                    display: flex;
+                    gap: 20px;
+                    @include ipad {
+                        gap: 10px;
+                    }
+                    button {
+                        width: 50%;
+                        background-color: transparent;
+                        border: 1px solid;
+                        border-radius: 5px;
+                        color: #31d0aa;
+                        font-size: 12px;
+                        line-height: 14px;
+                        text-align: center;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        padding: 10px 0;
+                        position: relative;
+                        // @include screen1440 {
+                        //     padding: 5px 0;
+                        //     display: flex;
+                        //     justify-content: center;
+                        // }
+                        @include ipad {
+                            display: block;
+                        }
+                        @include text-400;
+                        p {
+                            margin: 0;
+                        }
+                        &::after {
+                            position: absolute;
+
+                            content: '';
+                            background-color: var(--btn-transparent);
+                            border-left: 1px solid #31d0aa;
+                            border-bottom: 1px solid #31d0aa;
+                            top: -6px;
+                            left: 50%;
+                            width: 10px;
+                            height: 10px;
+                            transform: translateX(-50%) rotate(135deg);
+                        }
+                        &:last-child {
+                            color: #ed4b9e;
+
+                            &::after {
+                                position: absolute;
+
+                                content: '';
+                                background-color: var(--btn-transparent);
+                                border: 1px solid transparent;
+                                border-top: 1px solid #ed4b9e;
+                                border-right: 1px solid #ed4b9e;
+
+                                top: calc(100% - 6px);
+                                left: 50%;
+                                width: 10px;
+                                height: 10px;
+                                transform: translateX(-50%) rotate(135deg);
+                            }
+                        }
+                    }
+
+                    .fill-bull {
+                        background-color: #31d0aa;
+                        color: white !important;
+                        &::after {
+                            background-color: #31d0aa;
+                        }
+                    }
+                    .fill-bear {
+                        background-color: #ed4b9e;
+                        color: white !important;
+                        &::after {
+                            background-color: #ed4b9e !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .open-mobile {
+        display: block;
+    }
+    #chart-up-down {
+        @include ipad {
+            margin-top: 40px;
+        }
+        @include iphone {
+            margin-top: -40px;
+        }
+    }
+    :global(#chart-up-down) {
+        position: relative;
+        &::before {
+            position: absolute;
+            content: '';
+            width: 58%;
+            aspect-ratio: 1 / 1;
+            top: 33%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            left: 50%;
+            background: linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0) 4.06%,
+                #31d0aa 103.03%
+            );
+            opacity: 0.5;
+            border-radius: 50%;
+            @include screen1440 {
+                width: 54%;
+            }
+            @include screen1280 {
+                width: 53%;
+                top: 23%;
+            }
+            @include screen1024 {
+                width: 50%;
+                top: 23%;
+            }
+            @include ipad {
+                width: 54%;
+                top: 33%;
+            }
+        }
+    }
+}
+// :global(#chart-up-down) {
+//     height: 300px;
+//     width: 300px;
+//     margin: 0 auto;
+//     @include screen1280 {
+//         height: auto;
+//     }
+// }

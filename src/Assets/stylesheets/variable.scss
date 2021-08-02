@@ -1,0 +1,175 @@
+$black: #242745;
+$orange: #fa9b27;
+$navy: #000072;
+$pink: #ff3b6a;
+$dark-blue: #5b5ba1;
+$blue: #37dbff;
+$gray: #f3f3f3;
+
+@mixin screen1440 {
+    @media (max-width: 1440px) {
+        @content;
+    }
+}
+@mixin screen1280 {
+    @media (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin screen1024 {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin ipad {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin iphone {
+    @media (max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin iphone-mini {
+    @media (max-width: 375px) {
+        @content;
+    }
+}
+
+@mixin responsive {
+    padding-left: 150px !important;
+    padding-right: 150px !important;
+    @include screen1024 {
+        padding-left: 27px !important;
+        padding-right: 27px !important;
+    }
+}
+
+@mixin text-400 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+@mixin text-500 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+@mixin text-700 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+:global(body) {
+    --text-default: #313e69;
+    --text-default-2: #313e69;
+    --text-default-3: #40424f;
+    --text-2: #313e69;
+    --text-3: #323e69;
+    --text-4: #7a6eaa;
+    --text-5: #313e69;
+    --text-6: #7645d9;
+    --text-7: #323e69;
+    --text-8: rgba(49, 62, 105, 0.5);
+    --text-9: rgba(49, 62, 105, 0.5);
+    --text-10: #323e69;
+    --text-11: #7d8aab;
+    --text-violet: #7645d9;
+    --btn-left: #f2f4f9;
+    --background-wrap: #eceff6;
+    --background-main: rgba(255, 255, 255, 0.2);
+    --background-default: #fff;
+    --background-3: rgba(242, 244, 249, 0.5);
+    --background-4: #e7ebf3;
+    --background-5: #fff;
+    --background-6: #fff;
+    --background-7: #fff;
+    --background-8: transparent;
+    --background-9: #f2f4f9;
+    --background-10: #f2f4f9;
+    --background-11: #fff;
+    --background-12: #e7ebf3;
+    --background-13: #dbdfe7;
+    --background-14: #e7ebf3;
+    --border-wrap: #fff;
+    --border-1: rgba(196, 196, 196, 0.4);
+    --border-2: #7645d9;
+    --border-3: #cacddd;
+    --border-4: rgba(196, 196, 196, 0.4);
+    --border-5: rgba(49, 62, 105, 0.4);
+    --border-6: #40424f;
+    --btn-2: #e7ebf3;
+    --btn-3: rgba(255, 255, 255, 0.3);
+    --btn-4: rgba(0, 0, 0, 0.1);
+    --btn-transparent: #eee9ef;
+    --btn-5: #e0e5f2;
+    --btn-6: #fff;
+    --btn-7: #c4c4c4;
+    --box-shadow: #b5ccfb;
+    --box-shadow-2: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    --gradient-win: linear-gradient(
+        180deg,
+        #edf0f6 10.29%,
+        #30c4a3 196.45%,
+        #31d0aa 196.47%
+    );
+    --gradient-lose: linear-gradient(180deg, #edf0f6 10.29%, #ed4b9e 196.47%);
+    --text-1: #17236f;
+}
+:global(body[mode='dark']) {
+    --text-default: #ffffff;
+    --text-default-2: #fff;
+    --text-default-3: #ffffff;
+    --text-2: #4d5261;
+    --text-3: #7645d9;
+    --text-4: #fff;
+    --text-5: #1fc7d4;
+    --text-6: #fff;
+    --text-7: #a4a4a4;
+    --text-8: rgba(119, 121, 130, 0.5);
+    --text-9: rgba(255, 255, 255, 0.5);
+    --text-10: #ffffff;
+    --text-11: #1fc7d4;
+    --text-violet: #ffffff;
+    --background-wrap: #16182d;
+    --background-main: rgba(22, 24, 45, 0.2);
+    --background-default: #0b0d19;
+    --background-3: rgba(16, 19, 35, 0.5);
+    --background-4: #272a39;
+    --background-5: #101323;
+    --background-6: #272a39;
+    --background-7: #111424;
+    --background-8: rgba(53, 60, 100, 0.5);
+    --background-9: #383f65;
+    --background-10: #101323;
+    --background-11: #40424f;
+    --background-12: #0b0d19;
+    --background-13: #171925;
+    --background-14: #16182d;
+    --border-wrap: #313e69;
+    --border-1: #696969;
+    --border-2: #7645d9;
+    --border-3: #292f6d;
+    --border-4: #40424f;
+    --border-5: rgba(255, 255, 255, 0.4);
+    --border-6: #40424f;
+    --btn-left: #101323;
+    --btn-2: #16182d;
+    --btn-3: rgba(0, 0, 0, 0.3);
+    --btn-4: rgba(255, 255, 255, 0.1);
+    --btn-transparent: rgba(16, 19, 35, 1);
+    --btn-5: #171a2c;
+    --btn-6: #202648;
+    --btn-7: #272a39;
+    --box-shadow: #16182d;
+    --box-shadow-2: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    --gradient-win: linear-gradient(
+        180deg,
+        #202648 10.29%,
+        #30c4a3 196.45%,
+        #31d0aa 196.47%
+    );
+    --gradient-lose: linear-gradient(180deg, #202648 10.29%, #ed4b9e 196.47%);
+    --text-1: #80818a;
+}

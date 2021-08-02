@@ -1,0 +1,8 @@
+@import '../../Assets/stylesheets/variable.scss';
+.layout {
+    height: 100vh;
+
+    @include iphone {
+        height: -webkit-fill-available;
+    }
+}

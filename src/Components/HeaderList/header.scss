@@ -1,0 +1,81 @@
+@import '../../Assets/stylesheets/animation.scss';
+@import '../../Assets/stylesheets/variable.scss';
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    position: relative;
+    @include screen1024 {
+        display: none;
+    }
+    .right-header {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.wrap-list {
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 25px;
+    margin-top: 5px;
+    @include screen1440 {
+        width: 40%;
+    }
+    @include iphone {
+        margin: 0;
+    }
+    .wrap-items {
+        -webkit-animation: loop 30s infinite linear;
+        animation: loop 30s infinite linear;
+        width: auto;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        .list-items {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            align-items: center;
+            transition: all 0.5s ease;
+            white-space: nowrap;
+            height: 100%;
+            .item {
+                display: flex;
+                margin: 0 7px;
+                align-items: center;
+                font-size: 12px;
+                transition: all 0.2s ease-out;
+                color: var(--text-default);
+                @include text-500;
+                // @include screen1024{
+
+                // }
+                .hour {
+                    padding: 0 2px;
+                    @include text-400;
+                    font-size: 12px;
+                }
+                .status {
+                    display: flex;
+                    align-items: center;
+                    @include text-500;
+                    .dropdown {
+                        padding-left: 3px;
+                    }
+                }
+            }
+            p {
+                font-weight: 500;
+            }
+        }
+    }
+}

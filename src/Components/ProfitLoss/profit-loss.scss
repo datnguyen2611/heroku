@@ -1,0 +1,172 @@
+@import '../../Assets/stylesheets/variable.scss';
+
+.profit-loss-wrap {
+    background-color: var(--btn-left);
+    padding: 14px 10px;
+    height: 100vh;
+    // @include screen1024{
+    //     height: 100%;
+    // }
+    .title {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 10px;
+        color: var(--text-default);
+        @include ipad {
+            padding-top: 30px;
+        }
+        button {
+            margin: auto 0;
+            color: #c4c4c4;
+            cursor: pointer;
+            font-size: 14px;
+            @include ipad {
+                font-size: 18px;
+            }
+        }
+        p {
+            font-size: 18px;
+            color: var(--text-default);
+            @include text-700;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .connect_btn {
+        width: 100%;
+        padding: 4px 0;
+        text-align: center;
+        font-size: 14px;
+        color: #f2f2f2;
+        background: #202648;
+        font-weight: 700;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .your-story {
+        background-color: var(--background-4);
+        border-radius: 5px;
+        padding: 11px 8px;
+        @include ipad {
+            // max-height: 300px;
+            overflow-y: scroll;
+        }
+        .text-blue {
+            color: var(--text-5) !important;
+        }
+        .circle-chart {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .result {
+                width: 100%;
+                &-title {
+                    font-size: 12px;
+                    @include text-700;
+                    color: var(--text-4);
+                    margin-bottom: 9px;
+                }
+                &-price {
+                    font-size: 12px;
+                    color: #31d0aa;
+                    @include text-700;
+                    margin-bottom: 5px;
+                }
+                .text-blue {
+                    color: var(--text-5);
+                }
+                &-sub {
+                    color: var(--text-default);
+                    @include text-500;
+                    font-size: 12px;
+                }
+            }
+        }
+        .average-return {
+            &-item {
+                margin-bottom: 15px;
+                text-align: left;
+                .titles {
+                    font-size: 12px;
+                    @include text-700;
+                    color: var(--text-4);
+                    margin-bottom: 5px;
+                }
+                .price {
+                    font-size: 14px;
+                    @include text-700;
+                    color: #31d0aa;
+                    margin: 0;
+                }
+                .sub {
+                    color: var(--text-4);
+                    font-size: 12px;
+                    @include text-500;
+                }
+                &:last-child {
+                    border-bottom: 1px solid #c4c4c4;
+                }
+            }
+        }
+        .list-history {
+            margin: 10px 0;
+            &-item {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 15px;
+                align-items: flex-end;
+                p {
+                    margin: 0;
+                }
+                .item-left {
+                    .titles {
+                        color: var(--text-4);
+                        font-size: 12px;
+                        @include text-500;
+                        margin-bottom: 5px;
+                    }
+                    .round {
+                        font-size: 14px;
+                        @include text-700;
+                        margin-bottom: 3px;
+                    }
+                    .price {
+                        @include text-500;
+                        font-size: 12px;
+                        color: var(--text-4);
+                    }
+                }
+                .item-right {
+                    .round {
+                        font-size: 14px;
+                        @include text-700;
+                        margin-bottom: 3px;
+                    }
+                    .price {
+                        @include text-500;
+                        font-size: 12px;
+                        color: var(--text-4);
+                    }
+                }
+            }
+        }
+        .btn-view {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: #7645d9;
+            padding: 12px 0;
+            border-radius: 5px;
+            text-decoration: none;
+            p {
+                margin: 0 5px 0 0;
+                font-size: 12px;
+                @include text-700;
+            }
+        }
+    }
+}

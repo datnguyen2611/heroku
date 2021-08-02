@@ -1,0 +1,12 @@
+@import '../../Assets/stylesheets/variable.scss';
+.btn-dark-mode {
+    padding-left: 5px;
+    cursor: pointer;
+    width: 20%;
+    display: none;
+    @include ipad {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+}
